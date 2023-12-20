@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=010803
+      - MYSQL_DATABASE=ColameDBUser

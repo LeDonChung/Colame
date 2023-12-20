@@ -1,0 +1,12 @@
+#CONFIG APP NAME
+spring:
+  application:
+    name: RegistryService
+
+#CONFIG EUREKA SERVER
+server:
+  port: 8761
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
