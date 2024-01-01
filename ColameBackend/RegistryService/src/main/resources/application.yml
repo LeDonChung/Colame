@@ -5,7 +5,7 @@ spring:
 
 #CONFIG EUREKA SERVER
 server:
-  port: 8761
+    port: 8761
 eureka:
   client:
     fetch-registry: false
