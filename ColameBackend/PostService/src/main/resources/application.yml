@@ -1,0 +1,20 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: POST-SERVICE
+  datasource:
+    password: password
+    url: jdbc:postgresql://localhost:5432/ColameDBPost
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  config:
+    import: optional:configserver:http://localhost:8085

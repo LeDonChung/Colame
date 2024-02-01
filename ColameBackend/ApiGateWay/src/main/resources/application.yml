@@ -21,6 +21,15 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user/**
+          filters:
+            - AuthenticationFilter
+
+        - id: POST-SERVICE
+          uri: lb://POST-SERVICE
+          predicates:
+            - Path=/post/**
+          filters:
+            - AuthenticationFilter
 logging:
   level:
     org.springframework.web: DEBUG

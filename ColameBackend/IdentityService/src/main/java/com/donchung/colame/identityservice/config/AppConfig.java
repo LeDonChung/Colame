@@ -6,12 +6,13 @@ import com.donchung.colame.identityservice.config.filter.JwtUsernamePasswordAuth
 import com.donchung.colame.identityservice.exception.CustomAccessDeniedHandler;
 import com.donchung.colame.identityservice.jwt.JwtConfig;
 import com.donchung.colame.identityservice.jwt.JwtService;
-import com.donchung.colame.identityservice.service.security.UserDetailsServiceCustom;
+import com.donchung.colame.identityservice.services.security.UserDetailsServiceCustom;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.kafka.support.converter.JsonMessageConverter;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -26,6 +27,10 @@ import org.springframework.web.cors.CorsConfiguration;
 @Configuration
 @EnableWebSecurity
 public class AppConfig {
+    @Bean
+    JsonMessageConverter converter() {
+        return new JsonMessageConverter();
+    }
 
     @Autowired
     private CustomAuthenticationProvider customAuthenticationProvider;

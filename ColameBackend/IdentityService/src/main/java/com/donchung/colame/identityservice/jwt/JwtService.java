@@ -1,6 +1,6 @@
 package com.donchung.colame.identityservice.jwt;
 
-import com.donchung.colame.identityservice.service.security.UserDetailsCustom;
+import com.donchung.colame.identityservice.services.security.UserDetailsCustom;
 import io.jsonwebtoken.Claims;
 
 import java.security.Key;

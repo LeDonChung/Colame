@@ -3,7 +3,7 @@ package com.donchung.colame.identityservice.jwt.impl;
 import com.donchung.colame.identityservice.exception.BaseException;
 import com.donchung.colame.identityservice.jwt.JwtConfig;
 import com.donchung.colame.identityservice.jwt.JwtService;
-import com.donchung.colame.identityservice.service.security.UserDetailsCustom;
+import com.donchung.colame.identityservice.services.security.UserDetailsCustom;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

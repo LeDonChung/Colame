@@ -4,7 +4,7 @@ import com.donchung.colame.commonservice.utils.response.ApiResponse;
 import com.donchung.colame.identityservice.POJO.User;
 import com.donchung.colame.identityservice.jwt.JwtConfig;
 import com.donchung.colame.identityservice.jwt.JwtService;
-import com.donchung.colame.identityservice.service.security.UserDetailsCustom;
+import com.donchung.colame.identityservice.services.security.UserDetailsCustom;
 import com.donchung.colame.identityservice.utils.HelperUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
