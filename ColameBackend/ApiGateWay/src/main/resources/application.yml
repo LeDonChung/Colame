@@ -30,6 +30,11 @@ spring:
             - Path=/post/**
           filters:
             - AuthenticationFilter
+
+        - id: POST-SERVICE
+          uri: lb://POST-SERVICE
+          predicates:
+            - Path=/tag/**
 logging:
   level:
     org.springframework.web: DEBUG

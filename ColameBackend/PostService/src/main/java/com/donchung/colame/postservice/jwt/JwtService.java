@@ -11,4 +11,8 @@ public interface JwtService {
     Key getKey();
 
     boolean isValidToken(String token);
+
+    String getUsername();
+    boolean idAdmin();
+
 }

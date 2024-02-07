@@ -1,4 +1,4 @@
-package com.donchung.colame.userservice.utils;
+package com.donchung.colame.commonservice.utils;
 
 import lombok.Builder;
 import org.springframework.util.ObjectUtils;

@@ -56,6 +56,7 @@ public class AppConfig {
                 .csrf().disable()
                 .formLogin().disable()
                 .authorizeHttpRequests()
+                .requestMatchers("/tag/getAllByActive/**", "/tag/getPagesActive/**", "/tag/getByTagCode/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .authenticationManager(manager)

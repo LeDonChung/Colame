@@ -54,6 +54,20 @@ public class JwtServiceImpl implements JwtService {
         return !ObjectUtils.isEmpty(username);
     }
 
+    @Override
+    public String getUsername() {
+        return (String) claims.get("sub");
+    }
+
+    @Override
+    public boolean idAdmin() {
+        List<String> authorities = claims.get("authorities", List.class);
+        if(authorities.contains("ADMIN")) {
+            return true;
+        }
+        return false;
+    }
+
 
     private String extractUsername(String token) {
         return extractClaims(token, Claims::getSubject);

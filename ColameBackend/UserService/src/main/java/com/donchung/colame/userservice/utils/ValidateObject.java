@@ -1,6 +1,6 @@
 package com.donchung.colame.userservice.utils;
 
-import com.donchung.colame.userservice.POJO.UsernameType;
+import com.donchung.colame.commonservice.utils.ValidateUtils;
 import com.donchung.colame.userservice.utils.request.UserRequestDTO;
 
 import java.util.HashMap;
